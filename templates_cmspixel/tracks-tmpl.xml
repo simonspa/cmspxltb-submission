@@ -113,7 +113,7 @@ WARNING: - Please be aware that comments made in the original steering file were
     <!--Rotation Angle around Z axis-->
     <!--parameter name="Gamma" type="double" value="0"/-->
     <!--Enable or disable histograms-->
-    <parameter name="HistogramSwitch" type="bool" value="true"/>
+    <parameter name="HistogramSwitch" type="bool" value="false"/>
     <!--Events number to have DEBUG1 printed outs (default=10)-->
     <parameter name="PrintEvents" type="int" value="0"/>
     <!--This is the name of the reference it collection (init at 0,0,0)-->
@@ -172,7 +172,7 @@ WARNING: - Please be aware that comments made in the original steering file were
     <!--Rotation Angle around Z axis-->
     <!--parameter name="Gamma" type="double" value="0"/-->
     <!--Enable or disable histograms-->
-    <parameter name="HistogramSwitch" type="bool" value="true"/>
+    <parameter name="HistogramSwitch" type="bool" value="false"/>
     <!--Events number to have DEBUG1 printed outs (default=10)-->
     <parameter name="PrintEvents" type="int" value="0"/>
     <!--This is the name of the reference it collection (init at 0,0,0)-->
@@ -204,11 +204,11 @@ WARNING: - Please be aware that comments made in the original steering file were
     <!--Allow same hit to be used in more than one track-->
     <!--parameter name="AllowAmbiguousHits" type="bool" value="false"/-->
     <!--Allowed number of missing hits in the track-->
-    <parameter name="AllowMissingHits" type="int" value="1"/>
+    <parameter name="AllowMissingHits" type="int" value="@AllowMissingHits@"/>
     <!--Allowed number of hits removed from the track-->
-    <parameter name="AllowSkipHits" type="int" value="1"/>
+    <parameter name="AllowSkipHits" type="int" value="@AllowSkipHits@"/>
     <!--Do you want the reference hit collection to be corrected by the shifts and tilts from the alignment collection? (default - false )-->
-    <parameter name="ApplyToReferenceCollection" type="bool" value="false"/>
+    <parameter name="ApplyToReferenceCollection" type="bool" value="true"/>
     <!--Beam direction tilt in X-Z plane [rad] (for beam constraint)-->
     <!--parameter name="BeamSlopeX" type="double" value="0"/-->
     <!--Beam direction tilt in Y-Z plane [rad] (for beam constraint)-->
@@ -216,13 +216,13 @@ WARNING: - Please be aware that comments made in the original steering file were
     <!--Assumed angular spread of the beam [rad] (for beam constraint)-->
     <!--parameter name="BeamSpread" type="double" value="0.1"/-->
     <!--Maximum Chi2 for accepted track fit-->
-    <parameter name="Chi2Max" type="double" value="5000"/>
+    <parameter name="Chi2Max" type="double" value="@Chi2Max@"/>
     <!--Print out every DebugEnevtCount event-->
     <parameter name="DebugEventCount" type="int" value="1"/>
     <!--Beam energy [GeV]-->
-    <parameter name="Ebeam" type="double" value="280"/>
+    <parameter name="Ebeam" type="double" value="@BeamEnergy@"/>
     <!--Name of the histogram information file-->
-    <parameter name="HistoInfoFileName" type="string" value=""/>
+    <parameter name="HistoInfoFileName" type="string" value="histoinfo.xml"/>
     <!--Flag for storing input (measured) hits in track-->
     <parameter name="InputHitsInTrack" type="bool" value="true"/>
     <!--Ids of layers for which position masks are applied-->
@@ -244,7 +244,7 @@ WARNING: - Please be aware that comments made in the original steering file were
     <!--Flag for storing output (fitted) hits in track-->
     <parameter name="OutputHitsInTrack" type="bool" value="true"/>
     <!--Ids of layers which should be treated as passive in the fit-->
-    <parameter name="PassiveLayerIDs" type="IntVec"> 4 </parameter>
+    <parameter name="PassiveLayerIDs" type="IntVec"> </parameter>
     <!--reference hit collection name -->
     <parameter name="ReferenceCollection" type="string" value="refhit"/>
     <!--X resolution parameter for each plane. Note: these numbers are ordered according to the z position of the sensors and NOT according to the sensor id.-->
