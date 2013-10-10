@@ -31,7 +31,7 @@
       <parameter name="MaxRecordNumber" value="@NumEvents@"/>
       <parameter name="SkipNEvents" value="0"/>
       <parameter name="SupressCheck" value="false"/>
-      <parameter name="Verbosity" value="MESSAGE"/>
+      <parameter name="Verbosity" value="MESSAGE5"/>
    </global>
 
  <processor name="MyAIDAProcessor" type="AIDAProcessor">
