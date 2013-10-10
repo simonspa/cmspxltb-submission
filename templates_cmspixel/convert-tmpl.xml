@@ -48,7 +48,7 @@
  <!--Reads PSI46 testboard data files and creates LCEvents (zero suppressed data as sparsePixel).
 Make sure to not specify any LCIOInputFiles in the steering in order to read CMSPixel files.-->
   <!--Name of the output sparsified data collection-->
-  <parameter name="sparseDataCollectionName" type="string" lcioOutType="TrackerData"> data </parameter>
+  <parameter name="sparseDataCollectionName" type="string" lcioOutType="TrackerData"> sparse </parameter>
   <!--Input file-->
   <parameter name="FileName" type="string" value="@CMSNativePath@/@Native@"/>
   <!--Switch on or off the histogram filling-->
@@ -58,7 +58,7 @@ Make sure to not specify any LCIOInputFiles in the steering in order to read CMS
   <!--Choose the Testboard type. Can be: PSI_ATB, PSI_DTB, RAL-->
   <parameter name="TB_type" type="string" value="@tbType@"/>
   <!--verbosity level of this processor ("DEBUG0-4,MESSAGE0-4,WARNING0-4,ERROR0-4,SILENT")-->
-  <parameter name="Verbosity" type="string" value="DEBUG5"/>
+  <parameter name="Verbosity" type="string" value="@Verbosity@"/>
   <!--Address levels calibration file for the TBM and ROC address encoding levels.-->
   <parameter name="addressLevelsFile" type="string" value="addressParameters.dat"/>
   <!--Set decoder verbosity level: QUIET, SUMMARY, ERROR, WARNING, INFO, DEBUG, DEBUG1-4-->
