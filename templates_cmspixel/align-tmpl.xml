@@ -22,7 +22,7 @@ Version: $Id: hitmaker-tmp.xml,v 1.3 2009-06-04 17:19:01 bulgheroni Exp $
       <processor name="LoadRefHitDB"/>
       <processor name="LoadPreAlignment"/>
       <processor name="MyEUTelApplyPreAlignment"/>
-      <!--processor name="MyEUTelTestFitter"/-->
+      <processor name="MyEUTelTestFitter"/>
       <processor name="MyEUTelCorrelator"/>
       <processor name="MyEUTelMille"/>
    </execute>
@@ -131,9 +131,9 @@ Version: $Id: hitmaker-tmp.xml,v 1.3 2009-06-04 17:19:01 bulgheroni Exp $
   <!--Allow same hit to be used in more than one track-->
   <!--parameter name="AllowAmbiguousHits" type="bool" value="false"/-->
   <!--Allowed number of missing hits in the track-->
-  <parameter name="AllowMissingHits" type="int" value="2"/>
+  <parameter name="AllowMissingHits" type="int" value="1"/>
   <!--Allowed number of hits removed from the track-->
-  <parameter name="AllowSkipHits" type="int" value="1"/>
+  <parameter name="AllowSkipHits" type="int" value="0"/>
   <!--Do you want the reference hit collection to be corrected by the shifts and tilts from the alignment collection? (default - false )-->
   <parameter name="ApplyToReferenceCollection" type="bool" value="false"/>
   <!--Beam direction tilt in X-Z plane [rad] (for beam constraint)-->
@@ -163,11 +163,11 @@ Version: $Id: hitmaker-tmp.xml,v 1.3 2009-06-04 17:19:01 bulgheroni Exp $
   <!--Lower mask edge in Y-->
   <!--parameter name="MaskMinY" type="FloatVec"> </parameter-->
   <!--Maximum number of considered hits per plane-->
-  <parameter name="MaxPlaneHits" type="int" value="100"/>
+  <parameter name="MaxPlaneHits" type="int" value="20"/>
   <!--Maximum number of hits to be shared by more than one track-->
   <!--parameter name="MaximumAmbiguousHits" type="int" value="2"/-->
   <!--Chi2 penalty for missing hit in the track-->
-  <parameter name="MissingHitPenalty" type="double" value="0"/>
+  <parameter name="MissingHitPenalty" type="double" value="100"/>
   <!--Flag for storing output (fitted) hits in track-->
   <parameter name="OutputHitsInTrack" type="bool" value="true"/>
   <!--Ids of layers which should be treated as passive in the fit-->
@@ -189,13 +189,13 @@ Version: $Id: hitmaker-tmp.xml,v 1.3 2009-06-04 17:19:01 bulgheroni Exp $
   <!--Maximum hit distance from the expected position, used for hit preselection-->
   <parameter name="SlopeDistanceMax" type="float" value="10000"/>
   <!--Limit on track slope change when passing sensor layer (in X direction)-->
-  <parameter name="SlopeXLimit" type="float" value="20"/>
+  <parameter name="SlopeXLimit" type="float" value="1."/>
   <!--Limit on track slope change when passing sensor layer (in Y direction)-->
-  <parameter name="SlopeYLimit" type="float" value="20"/>
+  <parameter name="SlopeYLimit" type="float" value="1."/>
   <!--Flag for using beam direction constraint in the fit-->
   <!--parameter name="UseBeamConstraint" type="bool" value="false"/-->
   <!--Flag for including DUT measurement in the fit-->
-  <parameter name="UseDUT" type="bool" value="true"/>
+  <parameter name="UseDUT" type="bool" value="false"/>
   <!--Flag for using nominal resolution instead of position errors-->
   <parameter name="UseNominalResolution" type="bool" value="false"/>
   <!--Use expected track direction to constraint number of considered hit combinations (track preselection).-->
@@ -270,7 +270,7 @@ Version: $Id: hitmaker-tmp.xml,v 1.3 2009-06-04 17:19:01 bulgheroni Exp $
   <parameter name="OnlySingleHitEvents" type="int" value="0"/>
   <!--Use only events with one track candidate.-->
   <parameter name="OnlySingleTrackEvents" type="int" value="0"/>
-  <parameter name="FixParameter" type="IntVec">  </parameter>
+  <parameter name="FixParameter" type="IntVec">@FixParameter@</parameter>
 
   <!--Start values for the alignment for the angle gamma.-->
   <!--parameter name="PedeUserStartValuesGamma" type="FloatVec"> 0 0 0 0 0 0 </parameter-->

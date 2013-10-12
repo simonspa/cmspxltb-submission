@@ -25,7 +25,7 @@ WARNING: - Please be aware that comments made in the original steering file were
     <processor name="MyEUTelTestFitter"/>
     <processor name="MyLCIOOutputProcessor"/>
     <!--processor name="DUTHisto"/-->
-    <!--processor name="MyEUTelFitTuple"/-->
+    <processor name="MyEUTelFitTuple"/>
     <processor name="MyEUTelUtilityPrintEventNumber"/>
   </execute>
 
@@ -195,7 +195,7 @@ WARNING: - Please be aware that comments made in the original steering file were
     <!--Alignment corrections in Y for these layers-->
     <!--parameter name="AlignLayerShiftY" type="FloatVec"> </parameter-->
     <!--Allow same hit to be used in more than one track-->
-    <!--parameter name="AllowAmbiguousHits" type="bool" value="false"/-->
+    <parameter name="AllowAmbiguousHits" type="bool" value="false"/>
     <!--Allowed number of missing hits in the track-->
     <parameter name="AllowMissingHits" type="int" value="@AllowMissingHits@"/>
     <!--Allowed number of hits removed from the track-->
@@ -231,13 +231,13 @@ WARNING: - Please be aware that comments made in the original steering file were
     <!--Maximum number of considered hits per plane-->
     <parameter name="MaxPlaneHits" type="int" value="100"/>
     <!--Maximum number of hits to be shared by more than one track-->
-    <!--parameter name="MaximumAmbiguousHits" type="int" value="2"/-->
+    <parameter name="MaximumAmbiguousHits" type="int" value="1"/>
     <!--Chi2 penalty for missing hit in the track-->
-    <parameter name="MissingHitPenalty" type="double" value="0"/>
+    <parameter name="MissingHitPenalty" type="double" value="10"/>
     <!--Flag for storing output (fitted) hits in track-->
     <parameter name="OutputHitsInTrack" type="bool" value="true"/>
     <!--Ids of layers which should be treated as passive in the fit-->
-    <parameter name="PassiveLayerIDs" type="IntVec"> </parameter>
+    <parameter name="PassiveLayerIDs" type="IntVec">@ManualDUTID@</parameter>
     <!--reference hit collection name -->
     <parameter name="ReferenceCollection" type="string" value="refhit"/>
     <!--X resolution parameter for each plane. Note: these numbers are ordered according to the z position of the sensors and NOT according to the sensor id.-->
@@ -249,15 +249,15 @@ WARNING: - Please be aware that comments made in the original steering file were
     <!--Flag for searching multiple tracks in events with multiple hits-->
     <parameter name="SearchMultipleTracks" type="bool" value="true"/>
     <!--Chi2 penalty for removing hit from the track-->
-    <parameter name="SkipHitPenalty" type="double" value="100"/>
+    <parameter name="SkipHitPenalty" type="double" value="10"/>
     <!--Ids of layers which should NOT be included in the fit-->
-    <!--parameter name="SkipLayerIDs" type="IntVec"> </parameter-->
+    <!--parameter name="SkipLayerIDs" type="IntVec">@ManualDUTID@ </parameter-->
     <!--Maximum hit distance from the expected position, used for hit preselection-->
     <parameter name="SlopeDistanceMax" type="float" value="10000"/>
     <!--Limit on track slope change when passing sensor layer (in X direction)-->
-    <parameter name="SlopeXLimit" type="float" value="20"/>
+    <parameter name="SlopeXLimit" type="float" value="1."/>
     <!--Limit on track slope change when passing sensor layer (in Y direction)-->
-    <parameter name="SlopeYLimit" type="float" value="20"/>
+    <parameter name="SlopeYLimit" type="float" value="1."/>
     <!--Flag for using beam direction constraint in the fit-->
     <!--parameter name="UseBeamConstraint" type="bool" value="false"/-->
     <!--Flag for including DUT measurement in the fit-->
@@ -314,7 +314,7 @@ WARNING: - Please be aware that comments made in the original steering file were
     <!--Name of the input Track collection-->
     <parameter name="InputCollectionName" type="string" lcioInType="Track"> fittracks </parameter>
     <!--Name of the input DUT hit collection-->
-    <parameter name="InputDUTCollectionName" type="string" lcioInType="TrackerHit"> hits </parameter>
+    <parameter name="InputDUTCollectionName" type="string" lcioInType="TrackerHit"> alignedhits </parameter>
     <!--Alignment corrections for DUT: shift in X, Y and rotation around Z-->
     <parameter name="DUTalignment" type="FloatVec"> 0 0 0 </parameter>
     <!--Matching window for detection efficiency-->

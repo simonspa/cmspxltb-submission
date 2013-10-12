@@ -70,7 +70,7 @@ Make sure to not specify any LCIOInputFiles in the steering in order to read CMS
   <!--int vector to hold the telescope plane IDs in the order in which they get the readout token.-->
   <parameter name="shufflePlanes" type="IntVec"> 0 1 2 3 4 5 6 7 </parameter>
   <!--Enable or disable the writing of events with no hit in all sensor planes.-->
-  <parameter name="writeEmptyEvents" type="bool" value="true"/>
+  <parameter name="writeEmptyEvents" type="bool" value="@emptyEvents@"/>
 </processor>
 
  <processor name="MyLCIOOutputProcessor" type="LCIOOutputProcessor">
