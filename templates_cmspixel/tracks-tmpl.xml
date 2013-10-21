@@ -327,6 +327,8 @@ WARNING: - Please be aware that comments made in the original steering file were
     <parameter name="DistMax" type="double" value="1."/>
     <!--Id of telescope layer which should be used as DUT-->
     <parameter name="ManualDUTid" type="int" value="4"/>
+    <!--Maximum allowed distance between hit Z coordinate and the plane's Z coordinate-->
+    <parameter name="MaxZDistance" type="double" value="@MaxZDistance@"/>
     <!--Value used for missing measurements-->
     <parameter name="MissingValue" type="double" value="-100"/>
     <!--Flag for manual DUT selection-->
