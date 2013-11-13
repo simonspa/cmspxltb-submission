@@ -18,6 +18,7 @@
    <execute>
       <processor name="MyAIDAProcessor"/>
       <processor name="MyCMSPixelClusteringProcessor"/>
+	  <!--processor name="MyCMSPixelClusterTuple"/-->
       <processor name="MyLCIOOutputProcessor"/>
       <processor name="MyEUTelUtilityPrintEventNumber"/>
    </execute>
@@ -68,6 +69,18 @@
   <!--verbosity level of this processor ("DEBUG0-4,MESSAGE0-4,WARNING0-4,ERROR0-4,SILENT")-->
   <!--parameter name="Verbosity" type="string" value="MESSAGE"/-->
 </processor>
+
+  <processor name="MyCMSPixelClusterTuple" type="CMSPixelClusterTuple">
+    <!--Prepare n-tuple with clustering results-->
+    <!--Name of the input cluster collection-->
+    <parameter name="InputCollectionName" type="string" lcioInType="TrackerPulse"> cluster </parameter>
+    <!--Print out every DebugEnevtCount event-->
+    <parameter name="DebugEventCount" type="int" value="1"/>
+    <!--Value used for missing measurements-->
+    <parameter name="MissingValue" type="double" value="-100"/>
+    <!--verbosity level of this processor ("DEBUG0-4,MESSAGE0-4,WARNING0-4,ERROR0-4,SILENT")-->
+    <!--parameter name="Verbosity" type="string" value=""/-->
+  </processor>
 
  <processor name="MyLCIOOutputProcessor" type="LCIOOutputProcessor">
  <!--Writes the current event to the specified LCIO outputfile. Needs to be the last ActiveProcessor.-->
