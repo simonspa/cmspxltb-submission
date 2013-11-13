@@ -1,1 +1,5 @@
-*.zip
+# Ignore everything
+*
+
+# Except .gitingore
+!.gitignore

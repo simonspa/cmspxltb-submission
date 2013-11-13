@@ -1,3 +1,5 @@
-*.slcio
-*.txt
-*.bin
+# Ignore everything
+*
+
+# Except .gitingore
+!.gitignore
