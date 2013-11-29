@@ -9,36 +9,36 @@
       <siplanesNumber number="8" />
       <layers>
         <layer>
-          <ladder ID="0" positionX="0." positionY="0." positionZ="16.0" sizeX="7.8" sizeY="8.0" thickness="0.285" radLength="93.660734" />
-          <sensitive ID="0" positionX="0." positionY="0." positionZ="16.0" sizeX="7.8" sizeY="8.0" thickness="0.285" npixelX="52" npixelY="80" pitchX="0.15" pitchY="0.1" resolution="0.100" rotation1="1" rotation2="0" rotation3="0" rotation4="1" radLength="93.660734" />
+          <ladder ID="0" positionX="0." positionY="0." positionZ="16.0" sizeX="7.8" sizeY="8.0" rotationZY="0." rotationZX="0." rotationXY="0.0" thickness="0.285" radLength="93.660734" />
+          <sensitive ID="0" positionX="0." positionY="0." positionZ="16.0" rotation1="1" rotation2="0" rotation3="0" rotation4="1" sizeX="7.8" sizeY="8.0" thickness="0.285" npixelX="52" npixelY="80" pitchX="0.15" pitchY="0.1" resolution="0.100" radLength="93.660734" />
         </layer>
         <layer>
-          <ladder ID="1" positionX="0." positionY="0." positionZ="32.00" sizeX="7.8" sizeY="8.0" thickness="0.285" radLength="93.660734" />
-          <sensitive ID="1" positionX="0." positionY="0." positionZ="32.00" sizeX="7.8" sizeY="8.0" thickness="0.285" npixelX="52" npixelY="80" pitchX="0.15" pitchY="0.1" resolution="0.100" rotation1="1" rotation2="0" rotation3="0" rotation4="1" radLength="93.660734" />
+          <ladder ID="1" positionX="0." positionY="0." positionZ="32.00" sizeX="7.8" sizeY="8.0" rotationZY="0." rotationZX="0." rotationXY="0.0" thickness="0.285" radLength="93.660734" />
+          <sensitive ID="1" positionX="0." positionY="0." positionZ="32.00" rotation1="1" rotation2="0" rotation3="0" rotation4="1" sizeX="7.8" sizeY="8.0" thickness="0.285" npixelX="52" npixelY="80" pitchX="0.15" pitchY="0.1" resolution="0.100" radLength="93.660734" />
         </layer>
         <layer>
-          <ladder ID="2" positionX="0." positionY="0." positionZ="48.00" sizeX="7.8" sizeY="8.0" thickness="0.285" radLength="93.660734" />
-          <sensitive ID="2" positionX="0." positionY="0." positionZ="48.00" sizeX="7.8" sizeY="8.0" thickness="0.285" npixelX="52" npixelY="80" pitchX="0.15" pitchY="0.1" resolution="0.100" rotation1="1" rotation2="0" rotation3="0" rotation4="1" radLength="93.660734" />
+          <ladder ID="2" positionX="0." positionY="0." positionZ="48.00" sizeX="7.8" sizeY="8.0" rotationZY="0." rotationZX="0." rotationXY="0.0" thickness="0.285" radLength="93.660734" />
+          <sensitive ID="2" positionX="0." positionY="0." positionZ="48.00" rotation1="1" rotation2="0" rotation3="0" rotation4="1" sizeX="7.8" sizeY="8.0" thickness="0.285" npixelX="52" npixelY="80" pitchX="0.15" pitchY="0.1" resolution="0.100" radLength="93.660734" />
         </layer>
         <layer>
-          <ladder ID="3" positionX="0." positionY="0." positionZ="64.00" sizeX="7.8" sizeY="8.0" thickness="0.285" radLength="93.660734" />
-          <sensitive ID="3" positionX="0." positionY="0." positionZ="64.00" sizeX="7.8" sizeY="8.0" thickness="0.285" npixelX="52" npixelY="80" pitchX="0.15" pitchY="0.1" resolution="0.100" rotation1="1" rotation2="0" rotation3="0" rotation4="1" radLength="93.660734" />
+          <ladder ID="3" positionX="0." positionY="0." positionZ="64.00" sizeX="7.8" sizeY="8.0" rotationZY="0." rotationZX="0." rotationXY="0.0" thickness="0.285" radLength="93.660734" />
+          <sensitive ID="3" positionX="0." positionY="0." positionZ="64.00" rotation1="1" rotation2="0" rotation3="0" rotation4="1" sizeX="7.8" sizeY="8.0" thickness="0.285" npixelX="52" npixelY="80" pitchX="0.15" pitchY="0.1" resolution="0.100" radLength="93.660734" />
         </layer>
         <layer>
-          <ladder ID="4" positionX="0." positionY="0." positionZ="80.00" sizeX="7.8" sizeY="8.0" thickness="0.285" radLength="93.660734" />
-          <sensitive ID="4" positionX="0." positionY="0." positionZ="80.00" sizeX="7.8" sizeY="8.0" thickness="0.285" npixelX="52" npixelY="80" pitchX="0.15" pitchY="0.1" resolution="0.100" rotation1="1" rotation2="0" rotation3="0" rotation4="1" radLength="93.660734" />
+          <ladder ID="4" positionX="0." positionY="0." positionZ="80.5" sizeX="7.8" sizeY="8.0" rotationZY="0." rotationZX="0." rotationXY="0.0" thickness="0.285" radLength="93.660734" />
+          <sensitive ID="4" positionX="0." positionY="0." positionZ="80.5" rotation1="1" rotation2="0" rotation3="0" rotation4="1" sizeX="7.8" sizeY="8.0" thickness="0.285" npixelX="52" npixelY="80" pitchX="0.15" pitchY="0.1" resolution="0.100" radLength="93.660734" />
         </layer>
         <layer>
-          <ladder ID="5" positionX="0." positionY="0." positionZ="96.00" sizeX="7.8" sizeY="8.0" thickness="0.285" radLength="93.660734" />
-          <sensitive ID="5" positionX="0." positionY="0." positionZ="96.00" sizeX="7.8" sizeY="8.0" thickness="0.285" npixelX="52" npixelY="80" pitchX="0.15" pitchY="0.1" resolution="0.100" rotation1="1" rotation2="0" rotation3="0" rotation4="1" radLength="93.660734" />
+          <ladder ID="5" positionX="0." positionY="0." positionZ="96.00" sizeX="7.8" sizeY="8.0" rotationZY="0." rotationZX="0." rotationXY="0.0" thickness="0.285" radLength="93.660734" />
+          <sensitive ID="5" positionX="0." positionY="0." positionZ="96.00" rotation1="1" rotation2="0" rotation3="0" rotation4="1" sizeX="7.8" sizeY="8.0" thickness="0.285" npixelX="52" npixelY="80" pitchX="0.15" pitchY="0.1" resolution="0.100" radLength="93.660734" />
         </layer>
         <layer>
-   		  <ladder ID="6" positionX="0." positionY="0." positionZ="112.00" sizeX="7.8" sizeY="8.0" thickness="0.285" radLength="93.660734" />
-          <sensitive ID="6" positionX="0." positionY="0." positionZ="112.00" sizeX="7.8" sizeY="8.0" thickness="0.285" npixelX="52" npixelY="80" pitchX="0.15" pitchY="0.1" resolution="0.100" rotation1="1" rotation2="0" rotation3="0" rotation4="1" radLength="93.660734" />
+         <ladder ID="6" positionX="0." positionY="0." positionZ="112.00" sizeX="7.8" sizeY="8.0" rotationZY="0." rotationZX="0." rotationXY="0.0" thickness="0.285" radLength="93.660734" />
+          <sensitive ID="6" positionX="0." positionY="0." positionZ="112.00" rotation1="1" rotation2="0" rotation3="0" rotation4="1" sizeX="7.8" sizeY="8.0" thickness="0.285" npixelX="52" npixelY="80" pitchX="0.15" pitchY="0.1" resolution="0.100" radLength="93.660734" />
         </layer>
         <layer>
-          <ladder ID="7" positionX="0." positionY="0." positionZ="128.00" sizeX="7.8" sizeY="8.0" thickness="0.285" radLength="93.660734" />
-          <sensitive ID="7" positionX="0." positionY="0." positionZ="128.00" sizeX="7.8" sizeY="8.0" thickness="0.285" npixelX="52" npixelY="80" pitchX="0.15" pitchY="0.1" resolution="0.100" rotation1="1" rotation2="0" rotation3="0" rotation4="1" radLength="93.660734" />
+          <ladder ID="7" positionX="0." positionY="0." positionZ="128.00" sizeX="7.8" sizeY="8.0" rotationZY="0." rotationZX="0." rotationXY="0.0" thickness="0.285" radLength="93.660734" />
+          <sensitive ID="7" positionX="0." positionY="0." positionZ="128.00" rotation1="1" rotation2="0" rotation3="0" rotation4="1" sizeX="7.8" sizeY="8.0" thickness="0.285" npixelX="52" npixelY="80" pitchX="0.15" pitchY="0.1" resolution="0.100" radLength="93.660734" />
         </layer>
       </layers>
     </detector>
