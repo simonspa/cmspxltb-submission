@@ -61,6 +61,8 @@ Make sure to not specify any LCIOInputFiles in the steering in order to read CMS
   <parameter name="Verbosity" type="string" value="@Verbosity@"/>
   <!--Address levels calibration file for the TBM and ROC address encoding levels.-->
   <parameter name="addressLevelsFile" type="string" value="addressParameters.dat"/>
+  <!--Decoding statistics output file. -->
+  <parameter name="statisticsFile" type="string" value="@ResultsPath@/@RunNumber@-decoding.txt"/>
   <!--Gives the possibilty to cut our a rectangle from the hitmap and evaluate the trigger phase only for events with pixel hits in this region. Format is: ROC COL_MIN COL_MAX ROW_MIN ROW_MAX. Example: 5 34 52 33 54 gives a rectange on ROC5 between 34 <= x <= 52; 33 <= y <= 54.-->
   <parameter name="cutHitmap" type="IntVec"> @cutHitmap@ </parameter>
   <!--Set decoder verbosity level: QUIET, SUMMARY, ERROR, WARNING, INFO, DEBUG, DEBUG1-4-->
