@@ -18,6 +18,8 @@
    <execute>
       <processor name="MyAIDAProcessor"/>
       <processor name="MyEUTelConvertCMSPixel"/>
+      <processor name="AutoPedestalNoiseProcessor"/>
+      <processor name="HotPixelKiller"/>
       <processor name="MyLCIOOutputProcessor"/>
       <processor name="MyEUTelUtilityPrintEventNumber"/>
       <!--processor name="MyCMSPixelCalibrateEventProcessor"/-->
@@ -77,6 +79,63 @@ Make sure to not specify any LCIOInputFiles in the steering in order to read CMS
   <parameter name="shufflePlanes" type="IntVec"> 0 1 2 3 4 5 6 7 </parameter>
   <!--Enable or disable the writing of events with no hit in all sensor planes.-->
   <parameter name="writeEmptyEvents" type="bool" value="@emptyEvents@"/>
+</processor>
+
+ <processor name="AutoPedestalNoiseProcessor" type="EUTelAutoPedestalNoiseProcessor">
+ <!--EUTelAutoPedestalNoiseProcessor produces initial pedestal / noise / status with user provided values-->
+  <!--Noise local collection-->
+  <parameter name="NoiseCollectionName" type="string" lcioOutType="TrackerData"> cmspx_noise </parameter>
+  <!--Pedestal local collection-->
+  <parameter name="PedestalCollectionName" type="string" lcioOutType="TrackerData"> cmspx_pedestal </parameter>
+  <!--Pixel status collection-->
+  <parameter name="StatusCollectionName" type="string" lcioOutType="TrackerRawData"> cmspx_status </parameter>
+  <!--The initial value of noise (one value for detector)-->
+  <parameter name="InitNoiseValue" type="FloatVec"> 1 1 1 1 1 1 1 1 </parameter>
+  <!--The initial value of pedestal (one value for detector)-->
+  <parameter name="InitPedestalValue" type="FloatVec"> 0 0 0 0 0 0 0 0 </parameter>
+  <!--The maximum pixel along x (default 255, one value per detector)-->
+  <parameter name="MaxXVector" type="IntVec"> 51 51 51 51 51 51 51 51 </parameter>
+  <!--The maximum pixel along y (default 255, one value per detector)-->
+  <parameter name="MaxYVector" type="IntVec"> 79 79 79 79 79 79 79 79 </parameter>
+  <!--The minimum pixel along x (default 0, one value per detector)-->
+  <parameter name="MinXVector" type="IntVec"> 0 0 0 0 0 0 0 0 </parameter>
+  <!--The minimum pixel along y (default 0, one value per detector)-->
+  <parameter name="MinYVector" type="IntVec"> 0 0 0 0 0 0 0 0 </parameter>
+  <!--The sensorID for the generated collection (one per detector)-->
+  <parameter name="SensorIDVec" type="IntVec"> 0 1 2 3 4 5 6 7 </parameter>
+  <!--verbosity level of this processor ("DEBUG0-4,MESSAGE0-4,WARNING0-4,ERROR0-4,SILENT")-->
+  <!--parameter name="Verbosity" type="string" value=""/-->
+</processor>
+
+ <processor name="HotPixelKiller" type="EUTelHotPixelKiller">
+ <!--EUTelHotPixelKiller periodically check for pixel singing loud too often and remove them from the analysis-->
+  <!--Noise (input) collection name-->
+  <parameter name="NoiseCollectionName" type="string" lcioInType="TrackerData"> cmspx_noise </parameter>
+  <!--Pixel status (input) collection name-->
+  <parameter name="StatusCollectionName" type="string" lcioInType="TrackerRawData"> cmspx_status </parameter>
+  <!--Input of Zero Suppressed data-->
+  <parameter name="ZSDataCollectionName" type="string" lcioInType="TrackerData"> data </parameter>
+  <!--This flag is used to initialise simple data decoding and hot pixel finder (0-no, 1-yes)-->
+  <parameter name="BuildHotPixelDatabase" type="int" value="1"/>
+  <!--The list of sensor ids that have to be excluded from the clustering.-->
+  <!--parameter name="ExcludedPlanes" type="IntVec"> </parameter-->
+  <!--This is the name of the hot pixel collection to be saved into the output slcio file-->
+  <parameter name="HotPixelCollectionName" type="string" value="hotpixel"/>
+  <!--This is the name of the LCIO file name with the output hotpixel db (add .slcio)-->
+  <parameter name="HotPixelDBFile" type="string" value="@DatabasePath@/run@RunNumber@-hotpixel.slcio"/>
+  <!--Write mode for HotPixelDB file:  WRITE_APPEND or WRITE_NEW-->
+  <parameter name="LCIOWriteMode" type="string" value="WRITE_NEW"/>
+  <!--This float number [0,1] represents the maximum allowed firing frequency
+within the selected number of event per cycle-->
+  <parameter name="MaxAllowedFiringFreq" type="float" value="@hotpixelFrequency@"/>
+  <!-- Sorry, this parameter isn't a default parameter for this processor: description and type lost!!  -->
+  <parameter name="NZSDataCollectionName" value="nodata"/>
+  <!--The number of events to be considered for each update cycle-->
+  <parameter name="NoOfEventPerCycle" type="int" value="3333"/>
+  <!--The total number of hot pixel cycle-->
+  <parameter name="TotalNoOfCycle" type="int" value="11"/>
+  <!--verbosity level of this processor ("DEBUG0-4,MESSAGE0-4,WARNING0-4,ERROR0-4,SILENT")-->
+  <!--parameter name="Verbosity" type="string" value=""/-->
 </processor>
 
  <processor name="MyLCIOOutputProcessor" type="LCIOOutputProcessor">
