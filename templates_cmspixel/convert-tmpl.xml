@@ -55,6 +55,8 @@ Make sure to not specify any LCIOInputFiles in the steering in order to read CMS
   <parameter name="HistogramFilling" type="bool" value="true"/>
   <!--Choose the ROC type. Can be: psi46v2, psi46xdb, psi46dig_trig, psi46dig, psi46digv2_b, psi46digv2.-->
   <parameter name="ROC_type" type="int" value="@rocType@"/>
+  <!--Reject events with any decoding issues -->
+  <parameter name="RejectEvents" type="bool" value="@rejectEvents@"/>
   <!--Choose the Testboard type. Can be: PSI_ATB, PSI_DTB, RAL-->
   <parameter name="TB_type" type="string" value="@tbType@"/>
   <!--verbosity level of this processor ("DEBUG0-4,MESSAGE0-4,WARNING0-4,ERROR0-4,SILENT")-->
